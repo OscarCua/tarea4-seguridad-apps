@@ -1,0 +1,43 @@
+rules:
+  - id: python-sqli-cursor-execute-concat-fstring
+    languages:
+      - python
+    severity: ERROR
+    message: >-
+      Consulta SQL construida con concatenación de cadenas o f-string y ejecutada
+      con cursor.execute(). Si el valor insertado proviene de una entrada del usuario,
+      un atacante puede alterar la consulta (inyección SQL). Use consultas
+      parametrizadas: cursor.execute("SELECT ... WHERE col = %s", (valor,)).
+    metadata:
+      category: security
+      cwe:
+        - "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      owasp:
+        - "A03:2021 - Injection"
+      confidence: MEDIUM
+      references:
+        - https://cwe.mitre.org/data/definitions/89.html
+    pattern-either:
+      # Caso 1: la cadena insegura se construye dentro de la llamada
+      - patterns:
+          - pattern: $CURSOR.execute($QUERY, ...)
+          - metavariable-pattern:
+              metavariable: $QUERY
+              patterns:
+                - pattern-either:
+                    - pattern: '"..." + $X'
+                    - pattern: '"..." + $X + "..."'
+                    - pattern: 'f"...{$X}..."'
+      # Caso 2: la cadena insegura se asigna a una variable que luego llega a execute()
+      - patterns:
+          - pattern: |
+              $V = $EXPR
+              ...
+              $CURSOR.execute($V, ...)
+          - metavariable-pattern:
+              metavariable: $EXPR
+              patterns:
+                - pattern-either:
+                    - pattern: '"..." + $X'
+                    - pattern: '"..." + $X + "..."'
+                    - pattern: 'f"...{$X}..."'
