@@ -1,0 +1,72 @@
+---
+env:
+  contexts:
+    - name: juice-shop
+      urls:
+        - http://juiceshop:3000
+      includePaths:
+        - "http://juiceshop:3000.*"
+      excludePaths: []
+  parameters:
+    failOnError: true
+    failOnWarning: false
+    progressToStdout: true
+
+jobs:
+  - type: passiveScan-config
+    parameters:
+      scanOnlyInScope: true
+
+  - type: spider
+    parameters:
+      context: juice-shop
+      maxDuration: 2
+
+  - type: passiveScan-wait
+    parameters:
+      maxDuration: 5
+
+  - type: activeScan
+    parameters:
+      context: juice-shop
+      maxScanDurationInMins: 10
+    policyDefinition:
+      defaultStrength: Low
+      defaultThreshold: "Off"
+      rules:
+        - id: 40018
+          name: SQL Injection
+          threshold: Medium
+          strength: Medium
+        - id: 40012
+          name: Cross Site Scripting (Reflected)
+          threshold: Medium
+          strength: Medium
+        - id: 6
+          name: Path Traversal
+          threshold: Medium
+          strength: Medium
+        - id: 90020
+          name: Remote OS Command Injection
+          threshold: Medium
+          strength: Medium
+
+  - type: passiveScan-wait
+    parameters:
+      maxDuration: 5
+
+  - type: report
+    parameters:
+      template: traditional-html
+      reportDir: /zap/wrk
+      reportFile: zap-juiceshop-report
+      reportTitle: ZAP - OWASP Juice Shop v20.1.1
+    risks: [high, medium, low, info]
+
+  - type: report
+    parameters:
+      template: traditional-json
+      reportDir: /zap/wrk
+      reportFile: zap-juiceshop-report
+      reportTitle: ZAP - OWASP Juice Shop v20.1.1
+    risks: [high, medium, low, info]
