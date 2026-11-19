@@ -71,10 +71,15 @@ jobs:
           path: reports/
           if-no-files-found: warn
 
-      - name: Normalizar SARIF (quitar security-severity no numérico)
+      - name: Normalizar SARIF (compatibilidad con Code Scanning)
         if: always() && hashFiles('reports/semgrep.sarif') != ''
         run: |
-          jq 'del(.runs[].tool.driver.rules[]?.properties["security-severity"])' reports/semgrep.sarif > reports/semgrep.clean.sarif
+          jq '
+            def cut: if type == "string" and length > 255 then .[0:255] else . end;
+            del(.runs[].tool.driver.rules[]?.properties["security-severity"])
+            | .runs[].tool.driver.rules[]? |= ((.id |= cut) | (if has("name") then .name |= cut else . end))
+            | .runs[].results[]? |= (if has("ruleId") then .ruleId |= cut else . end)
+          ' reports/semgrep.sarif > reports/semgrep.clean.sarif
           mv reports/semgrep.clean.sarif reports/semgrep.sarif
 
       - name: Subir SARIF a code scanning
