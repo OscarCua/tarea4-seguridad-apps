@@ -15,16 +15,16 @@
   </properties>
 
   <dependencies>
-    <!-- Versión vulnerable a propósito (CVE-2021-44228) para la práctica -->
+    <!-- Versión corregida (antes 2.14.1, vulnerable a CVE-2021-44228) -->
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-api</artifactId>
-      <version>2.14.1</version>
+      <version>2.25.4</version>
     </dependency>
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-core</artifactId>
-      <version>2.14.1</version>
+      <version>2.25.4</version>
     </dependency>
   </dependencies>
 

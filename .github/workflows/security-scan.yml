@@ -71,6 +71,12 @@ jobs:
           path: reports/
           if-no-files-found: warn
 
+      - name: Normalizar SARIF (quitar security-severity no numérico)
+        if: always() && hashFiles('reports/semgrep.sarif') != ''
+        run: |
+          jq 'del(.runs[].tool.driver.rules[]?.properties["security-severity"])' reports/semgrep.sarif > reports/semgrep.clean.sarif
+          mv reports/semgrep.clean.sarif reports/semgrep.sarif
+
       - name: Subir SARIF a code scanning
         if: always() && hashFiles('reports/semgrep.sarif') != ''
         uses: github/codeql-action/upload-sarif@9b3254085494b55a0f7c4c2b3d2d52cc712ce370  # v4.39.1
