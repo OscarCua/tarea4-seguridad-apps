@@ -1,0 +1,457 @@
+{
+    "reportSchema": "1.1",
+    "scanInfo": {
+        "engineVersion": "12.2.2",
+        "dataSource": [
+{
+                "name": "NVD API Last Checked",
+                "timestamp": "2026-11-19T05:14:20Z"
+            }
+,{
+                "name": "NVD API Last Modified",
+                "timestamp": "2026-11-19T04:17:28Z"
+            }
+        ]
+
+
+    },
+    "projectInfo": {
+        "name": "OscarCua\/tarea4-seguridad-apps",
+        "reportDate": "2026-11-19T05:50:44.822539969Z",
+        "credits": {
+            "NVD": "This product uses the NVD API but is not endorsed or certified by the NVD. This report contains data retrieved from the National Vulnerability Database: https://nvd.nist.gov",
+            "CISA": "This report may contain data retrieved from the CISA Known Exploited Vulnerability Catalog: https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+            "NPM": "This report may contain data retrieved from the Github Advisory Database (via NPM Audit API): https://github.com/advisories/",
+            "RETIREJS": "This report may contain data retrieved from the RetireJS community: https://retirejs.github.io/retire.js/",
+            "OSSINDEX": "This report may contain data retrieved from the Sonatype Guide OSS Index API: https://www.sonatype.com/products/sonatype-guide/oss-index-users"
+        }
+    },
+    "dependencies": [
+{
+            "isVirtual": false,
+            "fileName": "log4j-core-2.25.4.jar",
+            "filePath": "\/home\/runner\/work\/tarea4-seguridad-apps\/tarea4-seguridad-apps\/proyecto-maven\/target\/dependency\/log4j-core-2.25.4.jar"
+,"md5": "62233cc04ded515e14b5fa4e88a9c5a9",
+            "sha1": "b963c3d6bfdf05c61ad47a74e9f9295131607df2",
+            "sha256": "10fee2c0485d54fa44ee75d314f6295508f7b932281873db61a91b88073200e6","description": "A versatile, industrial-grade, and reference implementation of the Log4j API.\n    It bundles a rich set of components to assist various use cases:\n    Appenders targeting files, network sockets, databases, SMTP servers;\n    Layouts that can render CSV, HTML, JSON, Syslog, etc. formatted outputs;\n    Filters that can be configured using log event rates, regular expressions, scripts, time, etc.\n    It contains several extension points to introduce custom components, if needed.","license": "Apache-2.0: https:\/\/www.apache.org\/licenses\/LICENSE-2.0.txt"            ,"relatedDependencies": [
+  {
+                    "isVirtual": false,
+                    "fileName": "log4j-api-2.25.4.jar",
+                    "filePath": "\/home\/runner\/work\/tarea4-seguridad-apps\/tarea4-seguridad-apps\/proyecto-maven\/target\/dependency\/log4j-api-2.25.4.jar"
+,"sha256": "c4b642a7f047275215de117e0e3847eb2c7711d84a0aa7433e7b3c096daf341d",
+                    "sha1": "89ff2217b193fb187b134aa6ebcbfa8a28b018a9",
+                    "md5": "5efb17ae45b749c1fbfedb3d93375cfc",
+                    "packageIds": [
+                            {
+                                "id": "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.4"
+                            }
+                    ]
+                }
+            ]
+            ,"evidenceCollected": {
+                "vendorEvidence": [
+{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "file",
+                            "name": "name",
+                            "value": "log4j-core"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "jar",
+                            "name": "package name",
+                            "value": "apache"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "jar",
+                            "name": "package name",
+                            "value": "core"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "jar",
+                            "name": "package name",
+                            "value": "log4j"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "jar",
+                            "name": "package name",
+                            "value": "logging"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "jar",
+                            "name": "package name",
+                            "value": "org"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "LOW",
+                            "source": "Manifest",
+                            "name": "build-jdk-spec",
+                            "value": "17"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "LOW",
+                            "source": "Manifest",
+                            "name": "bundle-activationpolicy",
+                            "value": "lazy"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "MEDIUM",
+                            "source": "Manifest",
+                            "name": "bundle-symbolicname",
+                            "value": "org.apache.logging.log4j.core"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "Manifest",
+                            "name": "Implementation-Vendor",
+                            "value": "The Apache Software Foundation"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "LOW",
+                            "source": "Manifest",
+                            "name": "multi-release",
+                            "value": "true"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "LOW",
+                            "source": "Manifest",
+                            "name": "provide-capability",
+                            "value": "osgi.service;objectClass:List=\"javax.annotation.processing.Processor\";effective:=active,osgi.service;objectClass:List=\"org.apache.logging.log4j.core.util.ContextDataProvider\";effective:=active,osgi.service;objectClass:List=\"org.apache.logging.log4j.message.ThreadDumpMessage$ThreadInfoFactory\";effective:=active,osgi.service;objectClass:List=\"org.apache.logging.log4j.spi.Provider\";effective:=active,osgi.serviceloader;osgi.serviceloader=\"javax.annotation.processing.Processor\";register:=\"org.apache.logging.log4j.core.config.plugins.processor.GraalVmProcessor\",osgi.serviceloader;osgi.serviceloader=\"javax.annotation.processing.Processor\";register:=\"org.apache.logging.log4j.core.config.plugins.processor.PluginProcessor\",osgi.serviceloader;osgi.serviceloader=\"org.apache.logging.log4j.core.util.ContextDataProvider\";register:=\"org.apache.logging.log4j.core.impl.ThreadContextDataProvider\",osgi.serviceloader;osgi.serviceloader=\"org.apache.logging.log4j.message.ThreadDumpMessage$ThreadInfoFactory\";register:=\"org.apache.logging.log4j.core.message.ExtendedThreadInfoFactory\",osgi.serviceloader;osgi.serviceloader=\"org.apache.logging.log4j.spi.Provider\";register:=\"org.apache.logging.log4j.core.impl.Log4jProvider\""
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "LOW",
+                            "source": "Manifest",
+                            "name": "specification-vendor",
+                            "value": "The Apache Software Foundation"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "LOW",
+                            "source": "pom",
+                            "name": "artifactid",
+                            "value": "log4j-core"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "pom",
+                            "name": "groupid",
+                            "value": "org.apache.logging.log4j"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "pom",
+                            "name": "name",
+                            "value": "Apache Log4j Core"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "LOW",
+                            "source": "pom",
+                            "name": "parent-artifactid",
+                            "value": "log4j"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "pom",
+                            "name": "url",
+                            "value": "https:\/\/logging.apache.org\/log4j\/2.x\/"
+                        }
+                ],
+                "productEvidence": [
+{
+                            "type": "product",
+                            "confidence": "HIGH",
+                            "source": "file",
+                            "name": "name",
+                            "value": "log4j-core"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "jar",
+                            "name": "package name",
+                            "value": "apache"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "jar",
+                            "name": "package name",
+                            "value": "core"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "jar",
+                            "name": "package name",
+                            "value": "log4j"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "jar",
+                            "name": "package name",
+                            "value": "logging"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "jar",
+                            "name": "package name",
+                            "value": "org"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "LOW",
+                            "source": "Manifest",
+                            "name": "build-jdk-spec",
+                            "value": "17"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "LOW",
+                            "source": "Manifest",
+                            "name": "bundle-activationpolicy",
+                            "value": "lazy"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "MEDIUM",
+                            "source": "Manifest",
+                            "name": "Bundle-Name",
+                            "value": "Apache Log4j Core"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "MEDIUM",
+                            "source": "Manifest",
+                            "name": "bundle-symbolicname",
+                            "value": "org.apache.logging.log4j.core"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "HIGH",
+                            "source": "Manifest",
+                            "name": "Implementation-Title",
+                            "value": "Apache Log4j Core"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "LOW",
+                            "source": "Manifest",
+                            "name": "multi-release",
+                            "value": "true"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "LOW",
+                            "source": "Manifest",
+                            "name": "provide-capability",
+                            "value": "osgi.service;objectClass:List=\"javax.annotation.processing.Processor\";effective:=active,osgi.service;objectClass:List=\"org.apache.logging.log4j.core.util.ContextDataProvider\";effective:=active,osgi.service;objectClass:List=\"org.apache.logging.log4j.message.ThreadDumpMessage$ThreadInfoFactory\";effective:=active,osgi.service;objectClass:List=\"org.apache.logging.log4j.spi.Provider\";effective:=active,osgi.serviceloader;osgi.serviceloader=\"javax.annotation.processing.Processor\";register:=\"org.apache.logging.log4j.core.config.plugins.processor.GraalVmProcessor\",osgi.serviceloader;osgi.serviceloader=\"javax.annotation.processing.Processor\";register:=\"org.apache.logging.log4j.core.config.plugins.processor.PluginProcessor\",osgi.serviceloader;osgi.serviceloader=\"org.apache.logging.log4j.core.util.ContextDataProvider\";register:=\"org.apache.logging.log4j.core.impl.ThreadContextDataProvider\",osgi.serviceloader;osgi.serviceloader=\"org.apache.logging.log4j.message.ThreadDumpMessage$ThreadInfoFactory\";register:=\"org.apache.logging.log4j.core.message.ExtendedThreadInfoFactory\",osgi.serviceloader;osgi.serviceloader=\"org.apache.logging.log4j.spi.Provider\";register:=\"org.apache.logging.log4j.core.impl.Log4jProvider\""
+                    }
+,{
+                            "type": "product",
+                            "confidence": "MEDIUM",
+                            "source": "Manifest",
+                            "name": "specification-title",
+                            "value": "Apache Log4j Core"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "pom",
+                            "name": "artifactid",
+                            "value": "log4j-core"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "pom",
+                            "name": "groupid",
+                            "value": "org.apache.logging.log4j"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "HIGH",
+                            "source": "pom",
+                            "name": "name",
+                            "value": "Apache Log4j Core"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "MEDIUM",
+                            "source": "pom",
+                            "name": "parent-artifactid",
+                            "value": "log4j"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "MEDIUM",
+                            "source": "pom",
+                            "name": "url",
+                            "value": "https:\/\/logging.apache.org\/log4j\/2.x\/"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "version",
+                        "value": "2.25.4"
+                    }
+,                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Bundle-Version",
+                        "value": "2.25.4"
+                    }
+,                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Implementation-Version",
+                        "value": "2.25.4"
+                    }
+,                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "version",
+                        "value": "2.25.4"
+                    }
+                ]
+            }
+                ,"packages": [
+                    {
+                        "id": "pkg:maven\/org.apache.logging.log4j\/log4j-core@2.25.4"
+,"confidence": "HIGH"                    }
+            ]                ,"vulnerabilityIds": [
+                {
+                    "id": "cpe:2.3:a:apache:log4j:2.25.4:*:*:*:*:*:*:*"
+,"confidence": "HIGHEST","url": "https:\/\/nvd.nist.gov\/vuln\/search#\/nvd\/home?sortOrder=3&sortDirection=2&cpeFilterMode=applicability&resultType=records&cpeName=cpe%3A2.3%3Aa%3Aapache%3Alog4j%3A2.25.4%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A"                }
+            ]
+            ,"vulnerabilities": [
+ {
+                "source": "NVD",
+                "name": "CVE-2026-49844",
+                    "severity" : "MEDIUM",
+                    "cvssv3": {
+                        "baseScore": 5.9
+                        ,"attackVector": "NETWORK"
+                        ,"attackComplexity": "HIGH"
+                        ,"privilegesRequired": "NONE"
+                        ,"userInteraction": "NONE"
+                        ,"scope": "UNCHANGED"
+                        ,"confidentialityImpact": "NONE"
+                        ,"integrityImpact": "HIGH"
+                        ,"availabilityImpact": "NONE"
+                        ,"baseSeverity": "MEDIUM"
+,"exploitabilityScore": "2.2","impactScore": "3.6","version": "3.1"                    },
+                    "cvssv4": {
+                        "vectorString": "CVSS:4.0\/AV:N\/AC:L\/AT:P\/PR:N\/UI:N\/VC:N\/VI:N\/VA:N\/SC:N\/SI:L\/SA:N\/E:X\/CR:X\/IR:X\/AR:X\/MAV:X\/MAC:X\/MAT:X\/MPR:X\/MUI:X\/MVC:X\/MVI:X\/MVA:X\/MSC:X\/MSI:X\/MSA:X\/S:X\/AU:X\/R:X\/V:X\/RE:X\/U:X"
+                        ,"source": "security@apache.org"
+                        ,"type": "Secondary"
+                        ,"version": "4.0"
+                        ,"attackVector": "NETWORK"
+                        ,"attackComplexity": "LOW"
+                        ,"attackRequirements": "PRESENT"
+                        ,"privilegesRequired": "NONE"
+                        ,"userInteraction": "NONE"
+                        ,"vulnerableSystemConfidentiality": "NONE"
+                        ,"vulnerableSystemIntegrity": "NONE"
+                        ,"vulnerableSystemAvailability": "NONE"
+                        ,"subsequentSystemConfidentiality": "NONE"
+                        ,"subsequentSystemIntegrity": "LOW"
+                        ,"subsequentSystemAvailability": "NONE"
+                        ,"exploitMaturity": "NOT_DEFINED"
+                        ,"confidentialityRequirements": "NOT_DEFINED"
+                        ,"integrityRequirements": "NOT_DEFINED"
+                        ,"availabilityRequirements": "NOT_DEFINED"
+                        ,"modifiedAttackVector": "NOT_DEFINED"
+                        ,"modifiedAttackComplexity": "NOT_DEFINED"
+                        ,"modifiedAttackRequirements": "NOT_DEFINED"
+                        ,"modifiedPrivilegesRequired": "NOT_DEFINED"
+                        ,"modifiedUserInteraction": "NOT_DEFINED"
+                        ,"modifiedVulnerableSystemConfidentiality": "NOT_DEFINED"
+                        ,"modifiedVulnerableSystemIntegrity": "NOT_DEFINED"
+                        ,"modifiedVulnerableSystemAvailability": "NOT_DEFINED"
+                        ,"modifiedSubsequentSystemConfidentiality": "NOT_DEFINED"
+                        ,"modifiedSubsequentSystemIntegrity": "NOT_DEFINED"
+                        ,"modifiedSubsequentSystemAvailability": "NOT_DEFINED"
+                        ,"safety": "NOT_DEFINED"
+                        ,"automatable": "NOT_DEFINED"
+                        ,"recovery": "NOT_DEFINED"
+                        ,"valueDensity": "NOT_DEFINED"
+                        ,"vulnerabilityResponseEffort": "NOT_DEFINED"
+                        ,"providerUrgency": "NOT_DEFINED"
+                        ,"baseScore": 6.3
+                        ,"baseSeverity": "MEDIUM"
+                    },
+                    "cwes": [
+                        "CWE-116"                    ],
+                "description": "Improper encoding of non-finite floating-point values during MapMessage JSON serialization in Apache Log4j API produces output that is not valid JSON. This issue affects Apache Log4j API versions 2.13.1 through 2.25.4 and version 2.26.0.\n\nThe fix for CVE-2026-34481 did not cover all code paths: when a MapMessage contains a non-finite IEEE 754 value (NaN, Infinity, or -Infinity), MapMessage.asJson() emits the corresponding bare token. RFC 8259 does not permit these tokens, so a conformant parser rejects the resulting document.\n\nThe defect is reachable only when both of the following conditions hold:\n\n  *  The application uses the  message resolver https:\/\/logging.apache.org\/log4j\/2.x\/manual\/json-template-layout.html#event-template-resolver-message  of JsonTemplateLayout or any other layout that relies on MapMessage.asJson() or MapMessage.getFormattedMessage(new String[]{\"JSON\"}).\n  *  The application logs a MapMessage that contains an attacker-controlled floating-point value.\n\n\nAn attacker who can supply a non-finite value can cause the affected layout to emit malformed JSON, which may corrupt the enclosing log record or disrupt downstream log ingestion and parsing.\n\nUsers are advised to upgrade to Apache Log4j API 2.25.5 or 2.26.1, both of which emit RFC 8259-compliant JSON for non-finite values.",
+                "notes": "",
+                "references": [
+ {
+                        "source": "security@apache.org"
+,"url": "https:\/\/logging.apache.org\/log4j\/2.x\/manual\/json-template-layout.html#event-template-resolver-message","name": "PRODUCT"                    }, {
+                        "source": "security@apache.org"
+,"url": "https:\/\/github.com\/apache\/logging-log4j2\/pull\/4163","name": "ISSUE_TRACKING,PATCH"                    }, {
+                        "source": "security@apache.org"
+,"url": "https:\/\/logging.apache.org\/security.html#CVE-2026-49844","name": "VENDOR_ADVISORY"                    }, {
+                        "source": "security@apache.org"
+,"url": "https:\/\/logging.apache.org\/cyclonedx\/vdr.xml","name": "VENDOR_ADVISORY"                    }                ],
+                "vulnerableSoftware": [
+ {
+                        "software": { 
+                            "id":"cpe:2.3:a:apache:log4j:*:*:*:*:*:*:*:*"
+,"vulnerabilityIdMatched":"true","versionStartIncluding":"2.13.1","versionEndExcluding":"2.25.5"                        }
+                    }, {
+                        "software": { 
+                            "id":"cpe:2.3:a:apache:log4j:2.26.0:*:*:*:*:*:*:*"
+                        }
+                    }, {
+                        "software": { 
+                            "id":"cpe:2.3:a:apache:log4j:3.0.0:alpha1:*:*:*:*:*:*"
+                        }
+                    }, {
+                        "software": { 
+                            "id":"cpe:2.3:a:apache:log4j:3.0.0:alpha1_rc1:*:*:*:*:*:*"
+                        }
+                    }, {
+                        "software": { 
+                            "id":"cpe:2.3:a:apache:log4j:3.0.0:alpha1_rc2:*:*:*:*:*:*"
+                        }
+                    }, {
+                        "software": { 
+                            "id":"cpe:2.3:a:apache:log4j:3.0.0:beta1:*:*:*:*:*:*"
+                        }
+                    }, {
+                        "software": { 
+                            "id":"cpe:2.3:a:apache:log4j:3.0.0:beta2:*:*:*:*:*:*"
+                        }
+                    }                ]
+                }            ]        }    ]
+}

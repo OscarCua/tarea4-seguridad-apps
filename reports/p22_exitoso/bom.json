@@ -1,0 +1,249 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:b189d22d-a484-3b71-8470-0c5a5eb25230",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2026-11-19T05:50:25Z",
+    "lifecycles" : [
+      {
+        "phase" : "build"
+      }
+    ],
+    "tools" : {
+      "components" : [
+        {
+          "type" : "library",
+          "author" : "OWASP Foundation",
+          "group" : "org.cyclonedx",
+          "name" : "cyclonedx-maven-plugin",
+          "version" : "2.9.2",
+          "description" : "CycloneDX Maven plugin",
+          "hashes" : [
+            {
+              "alg" : "MD5",
+              "content" : "843a7130400f75d33f563dc7e9f52dea"
+            },
+            {
+              "alg" : "SHA-1",
+              "content" : "2cac5a176b9f48801dfc4910d4f6a34bfbb13445"
+            },
+            {
+              "alg" : "SHA-256",
+              "content" : "d9e5a12bac3c1a91d85f3a1ad84307099f457ff24aa65b438ba7de9ca784a54e"
+            },
+            {
+              "alg" : "SHA-512",
+              "content" : "636f788518752c5a23d14bad41d68b0d549e4b3a3d720d66f2f6e2b8b956207942ee12abba968a1e9aac6cf1d78d9e738a4a75eeb8bc6fca2377030fbb482407"
+            },
+            {
+              "alg" : "SHA-384",
+              "content" : "72aad41633b92fadd4dbd1c6f5c1b956836b22d3b96afbdd7ca8b8eb0456eec00c2ed658e3c2d4e93d95048bcc23dac8"
+            },
+            {
+              "alg" : "SHA3-384",
+              "content" : "9837cee0f9b7d575f8d88df3ad6f58a075032ad2635e0987abbc102240327f1cec87dc062b3034009f028ab5baf988f9"
+            },
+            {
+              "alg" : "SHA3-256",
+              "content" : "4c654267cde6eb6d295dbc06b33e33528412bee57549dae89c85b8df8202dbcb"
+            },
+            {
+              "alg" : "SHA3-512",
+              "content" : "f7da73632ef2fd1c2d85f0cf5eebc2b6a3ff1ae2ed0945442e679da71490562a2ff6b67422dbd5285f4042eda6637e6f3544f62825a625b38efacfdebc8df137"
+            }
+          ]
+        }
+      ]
+    },
+    "component" : {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/edu.umg.seguridad/fel-service-demo@1.0.0?type=jar",
+      "group" : "edu.umg.seguridad",
+      "name" : "fel-service-demo",
+      "version" : "1.0.0",
+      "purl" : "pkg:maven/edu.umg.seguridad/fel-service-demo@1.0.0?type=jar"
+    },
+    "properties" : [
+      {
+        "name" : "maven.goal",
+        "value" : "makeAggregateBom"
+      },
+      {
+        "name" : "maven.scopes",
+        "value" : "compile,provided,runtime,system"
+      }
+    ]
+  },
+  "components" : [
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.4?type=jar",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.logging.log4j",
+      "name" : "log4j-api",
+      "version" : "2.25.4",
+      "description" : "The logging API of the Log4j project. Library and application code can log through this API. It contains a simple built-in implementation (`SimpleLogger`) for trivial use cases. Production applications are recommended to use Log4j API in combination with a fully-fledged implementation, such as Log4j Core.",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "5efb17ae45b749c1fbfedb3d93375cfc"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "89ff2217b193fb187b134aa6ebcbfa8a28b018a9"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "c4b642a7f047275215de117e0e3847eb2c7711d84a0aa7433e7b3c096daf341d"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "e6d6a8ad6542f071978b46858063a1a6fa2a3709a69460078cab3cb57907c10cd7c0746b83af04d8284120c3382ebdbd1aeabda4c370041c187b903daf71a94b"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "81407c406cee0bcb5bb052fbf1ecd162487db17e7f3b84489a6e5e9da14688b3082020abb01c20d1adf36b2592999f36"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "c05228836eef3d6dc30f8210b81e2aa1a3bfb2960a34bde1e2b88f8fb3ce4cae21a1efe84e058553990fa60860916136"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "bde486cc1dee149bbdec58c97085367c299be5f06d4b2e068bd26be14c6fa4b9"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "7bb13130a717f744141f1eb1fe9c7f8653de41936d870467e54c81a9c828be6ba0e28e7f3b72696c0cdc9f93ee6c6a5e64e58c7310f78f21f0a482e483ee8082"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0",
+            "url" : "https://www.apache.org/licenses/LICENSE-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.4?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://logging.apache.org/log4j/2.x/"
+        },
+        {
+          "type" : "build-system",
+          "url" : "https://github.com/apache/logging-log4j2/actions"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://github.com/apache/logging-log4j2/issues"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://lists.apache.org/list.html?log4j-user@logging.apache.org"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/apache/logging-log4j2"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.logging.log4j/log4j-core@2.25.4?type=jar",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.logging.log4j",
+      "name" : "log4j-core",
+      "version" : "2.25.4",
+      "description" : "A versatile, industrial-grade, and reference implementation of the Log4j API. It bundles a rich set of components to assist various use cases: Appenders targeting files, network sockets, databases, SMTP servers; Layouts that can render CSV, HTML, JSON, Syslog, etc. formatted outputs; Filters that can be configured using log event rates, regular expressions, scripts, time, etc. It contains several extension points to introduce custom components, if needed.",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "62233cc04ded515e14b5fa4e88a9c5a9"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "b963c3d6bfdf05c61ad47a74e9f9295131607df2"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "10fee2c0485d54fa44ee75d314f6295508f7b932281873db61a91b88073200e6"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "fc61e84587c6c060f89f71faad6a547b1fbdeba706d795daa210df947b08092b039ed40b0c9a4b507fd6207d33f796870209e47ca62c1f224895d2deb7b415fe"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "1c097c50acd1577f0a7ea1a249f7aeaff0473c7ab0e67778ed7ab6566662b96401d9e24792c0a17dfc23128c54fb6258"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "0b2172d1dbbc3a8631c18da988819bcf01011c1abb1396057464ab5e910afa40bccb92128c2139672f3e81da2fa72147"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "98edd5c29d25bef661121f16472567908473362d42d1f1e7e76a9ad69a45a8cb"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "48891c8663657fc204af54e15c4773c8dbebc1597b4be635084f4a1a1d8687576e1df91258cb6e5933586dd3c6b6cb9fdbb2edbff3da9fba8c501ea514a64bb0"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0",
+            "url" : "https://www.apache.org/licenses/LICENSE-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.logging.log4j/log4j-core@2.25.4?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://logging.apache.org/log4j/2.x/"
+        },
+        {
+          "type" : "build-system",
+          "url" : "https://github.com/apache/logging-log4j2/actions"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://github.com/apache/logging-log4j2/issues"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://lists.apache.org/list.html?log4j-user@logging.apache.org"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/apache/logging-log4j2"
+        }
+      ]
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "pkg:maven/edu.umg.seguridad/fel-service-demo@1.0.0?type=jar",
+      "dependsOn" : [
+        "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.4?type=jar",
+        "pkg:maven/org.apache.logging.log4j/log4j-core@2.25.4?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.4?type=jar",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.logging.log4j/log4j-core@2.25.4?type=jar",
+      "dependsOn" : [
+        "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.4?type=jar"
+      ]
+    }
+  ]
+}
