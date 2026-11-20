@@ -1,0 +1,1 @@
+bid A=6 bid B=7 | propia: HTTP 200 | ajena: HTTP 200 {"status":"success","data":{"id":7,"coupon":null,"UserId":25,"createdAt":"2026-11-20T03:21:54.274Z","updatedAt":"2026-11-20T03:21:54.274Z","Products":[]}}

@@ -1,0 +1,1 @@
+HTTP: 200 Location: '' | HTTPS: 000 (000 = no hay TLS)

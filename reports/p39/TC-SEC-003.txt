@@ -1,0 +1,1 @@
+Tokens iguales: False | whoami con token1 tras segundo login: HTTP 200 {"user":{}}
